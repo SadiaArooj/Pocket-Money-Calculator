@@ -1,30 +1,30 @@
-const TotalPocMon=10;
+const TotalPocMon = 10;
 
 let items = [];
 
-const newId  = items.length + 1;
+const newId = items.length + 1;
 
 const newItem = {
   id: newId,
   name: String,
-  price: Number
+  price: Number,
 };
 
-
-
-
 addProduct = document.getElementById("add");
-addProduct.addEventListener("click",calculate);
+addProduct.addEventListener("click", calculate);
 
-function calculate(){
+function calculate() {
+  productName = document.getElementById("prodName").value;
+  productCost = document.getElementById("prodCost").value;
 
-    productName= document.getElementById("prodName").value;
-    productCost= document.getElementById("prodCost").value;
-
+  if (productName.trim() == "" || productCost.trim() == "") {
+    alert("Add a product and its price");
+  } else {
     newItem.name = productName;
     newItem.price = productCost;
-    
+
     items.push(newItem);
-    
-    console.log(items)
+
+    console.log(items);
+  }
 }

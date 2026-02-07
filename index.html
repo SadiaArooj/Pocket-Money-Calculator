@@ -70,7 +70,7 @@
             </div>
             <div class="mt-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Cost(€)</label>
-                <textarea class="form-control" id="prodCost" rows="1" placeholder="1, 2.3"></textarea>
+                <textarea class="form-control" id="prodCost" rows="1" ></textarea>
 
                 <div class="mt-3"> <!-- Button for Adding to the Table -->
                     <button type="submit" id="add" class="btn btn-primary">
@@ -101,6 +101,13 @@
                     </tr>
 
                 </tbody>
+                <tfoot>
+        <tr>
+          <th colspan="2">Total</th>
+          <th id="total">0.00</th>
+          <th></th>
+        </tr>
+      </tfoot>
             </table>
             </table>
         </div>
